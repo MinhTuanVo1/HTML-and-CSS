@@ -1,11 +1,18 @@
 $blue-100 : #00B9EF;
 $blue-500 : #00428E;
 $blue-700 : #02203A;
-
+$yellow-100 : #F8DF08;
+$orange-100 : #F5A200;
+$blue-grey : #DAE5F2;
+$gray-100 : #708496;
+$gray-200 : #F7FBFF;
+$red-100 : #E9473F;
 
 body {
     font-family: 'Montserrat';
     font-weight: 400;
+    padding: 0;
+    margin: 0;
 }
 
 .navbar {
@@ -13,6 +20,8 @@ body {
     padding : 0px 88px;
     display: flex;
     justify-content: space-between;
+    font-size: 12px;
+    align-items: center;
 
     ul {
         list-style-type: none;
@@ -33,5 +42,275 @@ body {
         border-width: 0px;
         color: white;
         border-radius: 15px;
+    }
+}
+
+.containerSearchBox {
+    background-color: $blue-700;
+    position: relative;
+    color: white;
+
+    img {
+        opacity: 0.4;
+        width: 100%;
+    }
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .searchBox {
+        display: flex;
+        justify-content: space-between;
+
+        input {
+            padding: 12px;
+            width: 640px;
+            border-radius: 4px;
+            border-width: 0px;
+        }
+
+        button {
+            padding: 12px 44px;
+            text-transform: uppercase;
+            color: white;
+            background-color: $blue-100;
+            border-radius: 4px;
+            border-width: 0px;
+            font-weight: 14px;
+            width: 184px;
+            margin-left: 10px;
+        }
+    }
+}
+
+.midContent {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+
+    .highlight {
+        white-space: pre;
+        color: $orange-100;
+    }
+}
+
+.partner {
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.containerJobCategory {
+    display: flex;
+    justify-content: center;
+    background-color: #F9FCFF;
+    
+    .title {
+        display: flex;
+        justify-content: center;
+        h1 {
+            text-transform: uppercase;
+        }
+        .highlight {
+            color: $blue-100;
+        }
+    }
+    
+    .category {
+        display: flex;
+
+        .categoryItem {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 10px;
+            background-color: white;
+            padding: 16px 5px 16px 0px;
+            border-radius: 5px;
+        }
+        .categoryTitle {
+            border-left: 2px solid $blue-100;
+            font-weight: bold;
+            padding-left: 14px;
+            margin-right: 40px;
+        }
+
+        .numsPosition {
+            border-left: 1px solid $blue-grey;
+            text-align: right;
+            width: 100px;
+        }
+    }
+}
+
+.containerFeatureJob {
+    display: flex; 
+    padding: 0 88px;
+
+    .innerContainer {
+        width: 100%;
+    }  
+
+    .title {
+        display: flex;
+        justify-content: center;
+        .highlight {
+            color: $orange-100;
+        }
+    }
+
+    .featureJob {
+        display: grid;
+        grid-template-columns: 32% 32% 32%;
+        // display: flex;
+        // width: 100%;
+        justify-content: space-between; 
+    }
+
+    .featureItem {
+        width: 100%;
+        padding: 16px 0;
+        display: grid;
+        margin-bottom: 10px;
+
+        grid-template-columns: 30% 60% 10%;
+        
+        box-shadow: 0 0 24px rgba(0, 25, 54, 0.1);
+        border-radius: 8px; 
+
+        .companyLogo {
+            border-radius: 10px;
+            margin: 0px 15px;
+        }
+
+        .information {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            p {
+                margin: 0;
+            }
+            .featureTitle {
+                font-weight: bold;
+                margin-bottom: 2px;
+            }
+
+            .companyName {
+                color: $gray-100;
+            }
+
+            .typeJob {
+                font-size: 10px;
+                margin-left: 10px;
+                padding: 6px 11px;
+                font-weight: bold;
+                background-color: $gray-200;
+                border-width: 0px;
+            }
+
+            .fullTime {
+                color: $red-100;
+            }
+
+            .partTime {
+                color: $orange-100;
+            }
+        }
+
+        .detailArea {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .typeJobArea {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
+
+.containerSponsor {
+    display: flex;
+    justify-content: center;
+
+    .title {
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        
+        .highlight {
+            color: $blue-100;
+        }
+    }
+
+    .sponsors { 
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        justify-content: space-around;
+        
+        img {
+            margin : 0 20px;
+        }
+    }
+}
+
+.containerFooter {
+    background-color: $blue-700;
+
+    .companyInfo {
+        font-size: 12px;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        color: white;
+        padding: 32px;
+        
+
+        .detailInfor {
+            .title {
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            display: grid;
+            grid-template-columns: 40% 10% 15% 10%;
+            justify-content: space-between;
+            p {
+                margin: 0;
+            }
+            .infor {
+                display: flex;
+                align-items: flex-start;
+
+                img {
+                    margin-right: 5px;
+                }
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+
+.copyrightArea {
+    color: white;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    padding: 32px;
+    p {
+        margin: 0;
+    }
+
+    .socialNetwork {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
     }
 }
