@@ -1,0 +1,37 @@
+$blue-100 : #00B9EF;
+$blue-500 : #00428E;
+$blue-700 : #02203A;
+
+
+body {
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+
+.navbar {
+    height: 48px;
+    padding : 0px 88px;
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+        list-style-type: none;
+        display: flex;
+
+        li {
+            margin-left: 40px;
+        }
+    }
+
+    .active {
+        color: $blue-100;
+    }
+
+    .btn {
+        padding: 4px 14px;
+        background-color: $blue-100;
+        border-width: 0px;
+        color: white;
+        border-radius: 15px;
+    }
+}
